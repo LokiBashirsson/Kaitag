@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0b0a;
+  /* --foreground: #f4f4f5; */
+  --foreground: #b9a891;
+  --font-nunito: "Nunito", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --hr: oklch(66.557% 0.1691 52.898 / 0.3);
+  --active: lab(98.6252% -.635982 8.42309);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-nunito: var(--font-nunito);
+  --font-manrope: var(--font-manrope);
+}
+
+p {
+  font-family: var(--font-manrope);
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-nunito);
+}
+
+hr {
+  color: var(--hr);
+}
+
+a:hover {
+  transition: color 0.16s ease-in-out;
+  color: var(--active);
+}
+
+img {
+  object-fit: cover;
+}
