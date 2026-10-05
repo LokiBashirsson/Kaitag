@@ -1,5 +1,5 @@
-import { FurnituresPage } from "@/views/furnitures/ui/CatalogPage";
+import { CatalogPage } from "@/views/catalog/ui/CatalogPage";
 
 export default function Catalog() {
-  return <FurnituresPage />;
+  return <CatalogPage />;
 }

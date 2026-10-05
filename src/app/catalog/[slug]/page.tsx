@@ -1,5 +1,7 @@
-import { FurnituresPage } from "@/views/furnitures";
+import { CatalogPage } from "@/views/catalog/ui/CatalogPage";
+import { ICatalogSlugProps } from "./model/CatalogSlug.interface";
 
-export default function CatalogSlug(params: { slug: string }) {
-  return <FurnituresPage />;
+export default async function CatalogSlug({ params }: ICatalogSlugProps) {
+  const resolvedParams = await params;
+  return <CatalogPage slug={resolvedParams.slug} />;
 }
