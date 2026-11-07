@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Manrope, Nunito } from "next/font/google";
 import "./globals.css";
-import { StoreProvider } from "./providers/store-provider";
 import Header from "@/widgets/header/Header";
 import Footer from "@/widgets/footer/Footer";
+import Providers from "./providers";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -14,7 +14,7 @@ const manrope = Manrope({
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["cyrillic", "latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "600", "800"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Header />
-        <StoreProvider>{children}</StoreProvider>
+        <Providers>{children}</Providers>
         <hr />
         <Footer />
       </body>

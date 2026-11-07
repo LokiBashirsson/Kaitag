@@ -23,6 +23,8 @@ export default function CatalogCard({
         <Image
           loading="eager"
           className="w-full h-70 object-cover rounded"
+          width={300}
+          height={300}
           src={image}
           alt=""
         />
